@@ -8,6 +8,10 @@ let camera_stream = null;
 let media_recorder = null;
 let blobs_recorded = [];
 
+if ("mediaDevices" in navigator && "getUserMedia" in navigator.mediaDevices) {
+  console.log("Let's get this party started");
+}
+
 camera_button.addEventListener("click", async function () {
   camera_stream = await navigator.mediaDevices.getUserMedia({
     video: true,
