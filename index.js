@@ -10,6 +10,7 @@ let blobs_recorded = [];
 
 if ("mediaDevices" in navigator && "getUserMedia" in navigator.mediaDevices) {
   console.log("Let's get this party started");
+  alert("All works");
 }
 
 camera_button.addEventListener("click", async function () {
